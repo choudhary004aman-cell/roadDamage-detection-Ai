@@ -1,0 +1,1465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="RoadGuard India - AI-powered road damage detection demonstration."
+    >
+
+    <meta
+        name="theme-color"
+        content="#17212b"
+    >
+
+    <title>RoadGuard India | Smarter Roads. Safer India.</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- =========================================================
+     TOP UTILITY BAR
+========================================================= -->
+
+<div class="utility-bar">
+    <div class="container utility-inner">
+
+        <div class="utility-left">
+            <span data-i18n="utility_demo">
+                India-focused civic technology demonstration
+            </span>
+        </div>
+
+        <div class="utility-right">
+
+            <button
+                class="text-control"
+                id="decrease-font"
+                type="button"
+                aria-label="Decrease text size"
+                title="Decrease text size"
+            >
+                A−
+            </button>
+
+            <button
+                class="text-control active"
+                id="normal-font"
+                type="button"
+                aria-label="Normal text size"
+                title="Normal text size"
+            >
+                A
+            </button>
+
+            <button
+                class="text-control"
+                id="increase-font"
+                type="button"
+                aria-label="Increase text size"
+                title="Increase text size"
+            >
+                A+
+            </button>
+
+            <!-- REAL LANGUAGE SWITCH -->
+            <label
+                class="language-label"
+                for="language-select"
+                data-i18n="language_label"
+            >
+                Language
+            </label>
+
+            <select
+                id="language-select"
+                class="language-select"
+                aria-label="Select website language"
+            >
+                <option value="en">English</option>
+                <option value="hi">हिन्दी</option>
+            </select>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="site-header" id="home">
+
+    <div class="container header-inner">
+
+        <a
+            href="#home"
+            class="brand"
+            aria-label="RoadGuard India Home"
+        >
+
+            <div class="brand-mark" aria-hidden="true">
+                <div class="road-shape">
+                    <span></span>
+                </div>
+            </div>
+
+            <div class="brand-text">
+                <strong>RoadGuard</strong>
+                <span>INDIA</span>
+            </div>
+
+        </a>
+
+
+        <nav
+            class="main-nav"
+            id="main-nav"
+            aria-label="Main navigation"
+        >
+
+            <a
+                href="#home"
+                class="nav-link active"
+                data-i18n="nav_home"
+            >
+                Home
+            </a>
+
+            <a
+                href="#how-it-works"
+                class="nav-link"
+                data-i18n="nav_how"
+            >
+                How It Works
+            </a>
+
+            <a
+                href="#detect"
+                class="nav-link"
+                data-i18n="nav_detect"
+            >
+                Detect Damage
+            </a>
+
+            <a
+                href="#about"
+                class="nav-link"
+                data-i18n="nav_about"
+            >
+                About
+            </a>
+
+            <a
+                href="#support"
+                class="nav-link"
+                data-i18n="nav_support"
+            >
+                Support
+            </a>
+
+        </nav>
+
+
+        <div class="header-contact">
+
+            <span
+                class="header-phone"
+                data-i18n="header_phone"
+            >
+                Public-service demo
+            </span>
+
+            <button
+                class="mobile-menu-button"
+                id="mobile-menu-button"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<main>
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="hero">
+
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-inner">
+
+        <div class="hero-content">
+
+            <div class="eyebrow">
+                <span class="eyebrow-dot"></span>
+
+                <span data-i18n="hero_eyebrow">
+                    AI-powered road assessment
+                </span>
+            </div>
+
+
+            <h1 data-i18n="hero_title">
+                Smarter Roads. Safer India.
+            </h1>
+
+
+            <p
+                class="hero-description"
+                data-i18n="hero_description"
+            >
+                RoadGuard India uses computer vision to identify visible
+                road damage from images and return structured detection
+                results.
+            </p>
+
+
+            <div class="hero-actions">
+
+                <a
+                    href="#detect"
+                    class="button button-primary"
+                    data-i18n="hero_primary"
+                >
+                    Detect Road Damage
+                </a>
+
+                <a
+                    href="#how-it-works"
+                    class="button button-secondary"
+                    data-i18n="hero_secondary"
+                >
+                    Learn How It Works
+                </a>
+
+            </div>
+
+
+            <div class="hero-note">
+
+                <span class="note-icon">i</span>
+
+                <span data-i18n="hero_note">
+                    Student-built academic and research demonstration.
+                    Not an official Government of India service.
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- HERO SIDE CARD -->
+
+        <div class="hero-status-card">
+
+            <div class="status-card-header">
+
+                <span data-i18n="hero_status_title">
+                    Detection workflow
+                </span>
+
+                <span class="live-indicator">
+                    <span></span>
+
+                    <span data-i18n="status_ready">
+                        Ready
+                    </span>
+                </span>
+
+            </div>
+
+
+            <div class="workflow-list">
+
+                <div class="workflow-item">
+
+                    <div class="workflow-number">
+                        01
+                    </div>
+
+                    <div>
+                        <strong data-i18n="workflow_upload">
+                            Upload
+                        </strong>
+
+                        <span data-i18n="workflow_upload_desc">
+                            Road image
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="workflow-line"></div>
+
+
+                <div class="workflow-item">
+
+                    <div class="workflow-number">
+                        02
+                    </div>
+
+                    <div>
+                        <strong data-i18n="workflow_analyze">
+                            Analyze
+                        </strong>
+
+                        <span data-i18n="workflow_analyze_desc">
+                            AI model
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="workflow-line"></div>
+
+
+                <div class="workflow-item">
+
+                    <div class="workflow-number">
+                        03
+                    </div>
+
+                    <div>
+                        <strong data-i18n="workflow_result">
+                            Identify
+                        </strong>
+
+                        <span data-i18n="workflow_result_desc">
+                            Structured result
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     TRUST STRIP
+========================================================= -->
+
+<section class="trust-strip">
+
+    <div class="container trust-grid">
+
+        <div class="trust-item">
+
+            <span class="trust-icon">AI</span>
+
+            <div>
+                <strong data-i18n="trust_ai">
+                    AI-Powered Analysis
+                </strong>
+
+                <span data-i18n="trust_ai_desc">
+                    Computer vision detection
+                </span>
+            </div>
+
+        </div>
+
+
+        <div class="trust-item">
+
+            <span class="trust-icon">RD</span>
+
+            <div>
+                <strong data-i18n="trust_classes">
+                    Road Damage Classes
+                </strong>
+
+                <span data-i18n="trust_classes_desc">
+                    RDD2022-based categories
+                </span>
+            </div>
+
+        </div>
+
+
+        <div class="trust-item">
+
+            <span class="trust-icon">%</span>
+
+            <div>
+                <strong data-i18n="trust_confidence">
+                    Confidence Score
+                </strong>
+
+                <span data-i18n="trust_confidence_desc">
+                    Model confidence
+                </span>
+            </div>
+
+        </div>
+
+
+        <div class="trust-item">
+
+            <span class="trust-icon">JSON</span>
+
+            <div>
+                <strong data-i18n="trust_results">
+                    Structured Results
+                </strong>
+
+                <span data-i18n="trust_results_desc">
+                    Backend API response
+                </span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     DETECTION SECTION
+========================================================= -->
+
+<section
+    class="section detection-section"
+    id="detect"
+>
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div class="section-kicker">
+                <span data-i18n="detect_kicker">
+                    ROAD DAMAGE DETECTION
+                </span>
+            </div>
+
+            <h2 data-i18n="detect_title">
+                Analyze a road image
+            </h2>
+
+            <p data-i18n="detect_description">
+                Upload an image of a road and send it to the RoadGuard
+                detection API.
+            </p>
+
+        </div>
+
+
+        <div class="detection-layout">
+
+            <!-- UPLOAD PANEL -->
+
+            <div class="panel upload-panel">
+
+                <div class="panel-heading">
+
+                    <div>
+                        <span
+                            class="panel-label"
+                            data-i18n="upload_label"
+                        >
+                            INPUT
+                        </span>
+
+                        <h3 data-i18n="upload_title">
+                            Upload road image
+                        </h3>
+                    </div>
+
+                    <span
+                        class="api-status"
+                        id="api-status"
+                    >
+                        <span
+                            class="api-dot"
+                            id="api-dot"
+                        ></span>
+
+                        <span id="api-status-text">
+                            Checking backend...
+                        </span>
+                    </span>
+
+                </div>
+
+
+                <div
+                    class="upload-dropzone"
+                    id="dropzone"
+                    tabindex="0"
+                    role="button"
+                    aria-label="Upload a road image"
+                >
+
+                    <input
+                        type="file"
+                        id="image-input"
+                        accept="image/jpeg,image/png,image/jpg"
+                        hidden
+                    >
+
+
+                    <div
+                        class="upload-icon"
+                        aria-hidden="true"
+                    >
+                        ↑
+                    </div>
+
+
+                    <h4 data-i18n="upload_drop_title">
+                        Drag & drop your road image here
+                    </h4>
+
+
+                    <p data-i18n="upload_drop_text">
+                        or select an image from your device
+                    </p>
+
+
+                    <button
+                        class="button button-outline"
+                        id="browse-button"
+                        type="button"
+                        data-i18n="upload_browse"
+                    >
+                        Browse Files
+                    </button>
+
+
+                    <div class="upload-rules">
+
+                        <span data-i18n="upload_format">
+                            JPG, JPEG or PNG
+                        </span>
+
+                        <span>•</span>
+
+                        <span data-i18n="upload_size">
+                            Maximum 10 MB
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PREVIEW -->
+
+                <div
+                    class="preview-area hidden"
+                    id="preview-area"
+                >
+
+                    <div class="preview-header">
+
+                        <strong data-i18n="preview_title">
+                            Selected image
+                        </strong>
+
+                        <button
+                            id="remove-image"
+                            class="remove-button"
+                            type="button"
+                            data-i18n="preview_remove"
+                        >
+                            Remove
+                        </button>
+
+                    </div>
+
+
+                    <div class="preview-image-wrapper">
+
+                        <img
+                            id="preview-image"
+                            src=""
+                            alt="Selected road image"
+                        >
+
+                    </div>
+
+
+                    <div class="preview-file-info">
+
+                        <span id="file-name">
+                            —
+                        </span>
+
+                        <span id="file-size">
+                            —
+                        </span>
+
+                    </div>
+
+
+                    <button
+                        id="analyze-button"
+                        class="button button-primary full-width"
+                        type="button"
+                        disabled
+                    >
+                        <span data-i18n="analyze_button">
+                            Analyze Road Damage
+                        </span>
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- RESULT PANEL -->
+
+            <div class="panel result-panel">
+
+                <div class="panel-heading">
+
+                    <div>
+                        <span
+                            class="panel-label"
+                            data-i18n="result_label"
+                        >
+                            OUTPUT
+                        </span>
+
+                        <h3 data-i18n="result_title">
+                            Analysis result
+                        </h3>
+                    </div>
+
+                    <span
+                        class="result-state"
+                        id="result-state"
+                        data-i18n="result_waiting"
+                    >
+                        Waiting for image
+                    </span>
+
+                </div>
+
+
+                <!-- EMPTY RESULT -->
+
+                <div
+                    class="result-empty"
+                    id="result-empty"
+                >
+
+                    <div class="result-empty-icon">
+                        ✓
+                    </div>
+
+                    <h4 data-i18n="result_empty_title">
+                        No analysis yet
+                    </h4>
+
+                    <p data-i18n="result_empty_text">
+                        Upload a road image to see detection results here.
+                    </p>
+
+                </div>
+
+
+                <!-- LOADING -->
+
+                <div
+                    class="result-loading hidden"
+                    id="result-loading"
+                >
+
+                    <div class="loader"></div>
+
+                    <h4 data-i18n="loading_title">
+                        Analyzing image
+                    </h4>
+
+                    <p
+                        id="loading-message"
+                        data-i18n="loading_text"
+                    >
+                        Sending image to the AI detection service...
+                    </p>
+
+                </div>
+
+
+                <!-- RESULTS -->
+
+                <div
+                    class="result-content hidden"
+                    id="result-content"
+                >
+
+                    <div class="result-summary">
+
+                        <div class="summary-main">
+
+                            <span
+                                class="summary-label"
+                                data-i18n="summary_damage"
+                            >
+                                DETECTED DAMAGE
+                            </span>
+
+                            <strong id="damage-class">
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <div class="confidence-box">
+
+                            <span
+                                data-i18n="summary_confidence"
+                            >
+                                Confidence
+                            </span>
+
+                            <strong id="confidence-value">
+                                —
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="result-details-grid">
+
+                        <div class="detail-card">
+
+                            <span
+                                data-i18n="detail_severity"
+                            >
+                                Severity
+                            </span>
+
+                            <strong id="severity-value">
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <div class="detail-card">
+
+                            <span
+                                data-i18n="detail_location"
+                            >
+                                Location
+                            </span>
+
+                            <strong id="location-value">
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <div class="detail-card">
+
+                            <span
+                                data-i18n="detail_road"
+                            >
+                                Road information
+                            </span>
+
+                            <strong id="road-value">
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <div class="detail-card">
+
+                            <span
+                                data-i18n="detail_detections"
+                            >
+                                Detections
+                            </span>
+
+                            <strong id="detection-count">
+                                0
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- DETECTION TABLE -->
+
+                    <div
+                        class="detection-table-wrapper"
+                        id="detection-table-wrapper"
+                    >
+
+                        <h4 data-i18n="table_title">
+                            Detected objects
+                        </h4>
+
+                        <div class="table-scroll">
+
+                            <table class="detection-table">
+
+                                <caption
+                                    data-i18n="table_caption"
+                                >
+                                    Road damage detections returned by
+                                    the AI model
+                                </caption>
+
+                                <thead>
+
+                                <tr>
+
+                                    <th scope="col"
+                                        data-i18n="table_class">
+                                        Class
+                                    </th>
+
+                                    <th scope="col"
+                                        data-i18n="table_confidence">
+                                        Confidence
+                                    </th>
+
+                                    <th scope="col"
+                                        data-i18n="table_severity">
+                                        Severity
+                                    </th>
+
+                                    <th scope="col"
+                                        data-i18n="table_bbox">
+                                        Bounding Box
+                                    </th>
+
+                                </tr>
+
+                                </thead>
+
+                                <tbody id="detections-body">
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ANNOTATED IMAGE -->
+
+                    <div
+                        class="annotated-result hidden"
+                        id="annotated-result"
+                    >
+
+                        <h4 data-i18n="annotated_title">
+                            Annotated image
+                        </h4>
+
+                        <div class="annotated-image-wrapper">
+
+                            <img
+                                id="annotated-image"
+                                src=""
+                                alt="AI annotated road damage result"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="backend-message"
+                        id="backend-message"
+                    ></div>
+
+                </div>
+
+
+                <!-- ERROR -->
+
+                <div
+                    class="result-error hidden"
+                    id="result-error"
+                >
+
+                    <div class="error-icon">
+                        !
+                    </div>
+
+                    <h4 data-i18n="error_title">
+                        Analysis could not be completed
+                    </h4>
+
+                    <p id="error-message">
+                        —
+                    </p>
+
+                    <button
+                        id="retry-button"
+                        class="button button-outline"
+                        type="button"
+                        data-i18n="error_retry"
+                    >
+                        Try Again
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     HOW IT WORKS
+========================================================= -->
+
+<section
+    class="section light-section"
+    id="how-it-works"
+>
+
+    <div class="container">
+
+        <div class="section-heading centered">
+
+            <div class="section-kicker">
+                <span data-i18n="how_kicker">
+                    HOW IT WORKS
+                </span>
+            </div>
+
+            <h2 data-i18n="how_title">
+                From road image to structured result
+            </h2>
+
+            <p data-i18n="how_description">
+                The website provides a simple interface between the
+                user and the road-damage detection model.
+            </p>
+
+        </div>
+
+
+        <div class="steps-grid">
+
+            <article class="step-card">
+
+                <div class="step-number">
+                    01
+                </div>
+
+                <h3 data-i18n="step1_title">
+                    Capture
+                </h3>
+
+                <p data-i18n="step1_text">
+                    Select a clear road image from your device.
+                </p>
+
+            </article>
+
+
+            <article class="step-card">
+
+                <div class="step-number">
+                    02
+                </div>
+
+                <h3 data-i18n="step2_title">
+                    Analyze
+                </h3>
+
+                <p data-i18n="step2_text">
+                    The frontend sends the image to the Flask
+                    prediction API.
+                </p>
+
+            </article>
+
+
+            <article class="step-card">
+
+                <div class="step-number">
+                    03
+                </div>
+
+                <h3 data-i18n="step3_title">
+                    Identify
+                </h3>
+
+                <p data-i18n="step3_text">
+                    The AI model returns road-damage detections,
+                    confidence and bounding boxes.
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     ABOUT / ARCHITECTURE
+========================================================= -->
+
+<section
+    class="section"
+    id="about"
+>
+
+    <div class="container">
+
+        <div class="about-grid">
+
+            <div>
+
+                <div class="section-kicker">
+                    <span data-i18n="about_kicker">
+                        ABOUT ROADGUARD
+                    </span>
+                </div>
+
+                <h2 data-i18n="about_title">
+                    A practical civic-technology demonstration
+                </h2>
+
+                <p data-i18n="about_text1">
+                    RoadGuard India demonstrates how computer vision
+                    can be connected to a web interface for road
+                    damage analysis.
+                </p>
+
+                <p data-i18n="about_text2">
+                    The application is designed as an academic and
+                    research demonstration using road-damage data and
+                    a YOLO-based detection workflow.
+                </p>
+
+            </div>
+
+
+            <div class="architecture-card">
+
+                <span
+                    class="architecture-label"
+                    data-i18n="architecture_label"
+                >
+                    SYSTEM FLOW
+                </span>
+
+
+                <div class="architecture-flow">
+
+                    <div class="architecture-node">
+                        <span class="node-icon">U</span>
+
+                        <strong data-i18n="architecture_user">
+                            User
+                        </strong>
+                    </div>
+
+
+                    <span class="architecture-arrow">
+                        →
+                    </span>
+
+
+                    <div class="architecture-node">
+                        <span class="node-icon">W</span>
+
+                        <strong data-i18n="architecture_frontend">
+                            Frontend
+                        </strong>
+                    </div>
+
+
+                    <span class="architecture-arrow">
+                        →
+                    </span>
+
+
+                    <div class="architecture-node">
+                        <span class="node-icon">API</span>
+
+                        <strong data-i18n="architecture_backend">
+                            Backend
+                        </strong>
+
+                        <small>
+                            POST /predict
+                        </small>
+                    </div>
+
+
+                    <span class="architecture-arrow">
+                        →
+                    </span>
+
+
+                    <div class="architecture-node">
+                        <span class="node-icon">AI</span>
+
+                        <strong data-i18n="architecture_model">
+                            AI Model
+                        </strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     SUPPORT
+========================================================= -->
+
+<section
+    class="section support-section"
+    id="support"
+>
+
+    <div class="container">
+
+        <div class="support-card">
+
+            <div class="support-content">
+
+                <div class="section-kicker">
+                    <span data-i18n="support_kicker">
+                        SUPPORT
+                    </span>
+                </div>
+
+                <h2 data-i18n="support_title">
+                    Questions about the demonstration?
+                </h2>
+
+                <p data-i18n="support_text">
+                    Contact the project team for questions about the
+                    website, demonstration or implementation.
+                </p>
+
+            </div>
+
+
+            <div class="contact-details">
+
+                <a
+                    href="mailto:Chaudhary004Aman@gmail.com"
+                    class="contact-item"
+                >
+
+                    <span class="contact-icon">
+                        @
+                    </span>
+
+                    <span>
+                        <small data-i18n="contact_email">
+                            Email
+                        </small>
+
+                        <strong>
+                            Chaudhary004Aman@gmail.com
+                        </strong>
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="tel:620664181"
+                    class="contact-item"
+                >
+
+                    <span class="contact-icon">
+                        #
+                    </span>
+
+                    <span>
+                        <small data-i18n="contact_phone">
+                            Phone
+                        </small>
+
+                        <strong>
+                            620664181
+                        </strong>
+                    </span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     OFFICIAL RESOURCE LINKS
+========================================================= -->
+
+<section class="resource-section">
+
+    <div class="container">
+
+        <div class="resource-heading">
+
+            <div>
+                <span
+                    class="section-kicker"
+                    data-i18n="resources_kicker"
+                >
+                    PUBLIC RESOURCES
+                </span>
+
+                <h2 data-i18n="resources_title">
+                    Useful Indian civic resources
+                </h2>
+            </div>
+
+            <p data-i18n="resources_text">
+                These links are provided as external resources and
+                are not operated by RoadGuard India.
+            </p>
+
+        </div>
+
+
+        <div class="resource-grid">
+
+            <a
+                href="https://pgportal.gov.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="resource-card"
+            >
+
+                <strong>
+                    CPGRAMS
+                </strong>
+
+                <span data-i18n="resource_cpgrams">
+                    Centralized Public Grievance Redress and Monitoring
+                    System
+                </span>
+
+                <span class="resource-arrow">
+                    ↗
+                </span>
+
+            </a>
+
+
+            <a
+                href="https://www.mygov.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="resource-card"
+            >
+
+                <strong>
+                    MyGov India
+                </strong>
+
+                <span data-i18n="resource_mygov">
+                    Citizen participation and government information
+                </span>
+
+                <span class="resource-arrow">
+                    ↗
+                </span>
+
+            </a>
+
+
+            <a
+                href="https://morth.nic.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="resource-card"
+            >
+
+                <strong>
+                    MoRTH
+                </strong>
+
+                <span data-i18n="resource_morth">
+                    Ministry of Road Transport and Highways
+                </span>
+
+                <span class="resource-arrow">
+                    ↗
+                </span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="site-footer">
+
+    <div class="container">
+
+        <div class="footer-main">
+
+            <div class="footer-brand">
+
+                <div class="brand footer-brand-mark">
+
+                    <div class="brand-mark">
+                        <div class="road-shape">
+                            <span></span>
+                        </div>
+                    </div>
+
+                    <div class="brand-text">
+                        <strong>RoadGuard</strong>
+                        <span>INDIA</span>
+                    </div>
+
+                </div>
+
+
+                <p data-i18n="footer_description">
+                    AI-assisted road damage detection for an academic
+                    and research demonstration.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a
+                    href="#home"
+                    data-i18n="nav_home"
+                >
+                    Home
+                </a>
+
+                <a
+                    href="#how-it-works"
+                    data-i18n="nav_how"
+                >
+                    How It Works
+                </a>
+
+                <a
+                    href="#detect"
+                    data-i18n="nav_detect"
+                >
+                    Detect Damage
+                </a>
+
+                <a
+                    href="#support"
+                    data-i18n="nav_support"
+                >
+                    Support
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p data-i18n="footer_disclaimer">
+                RoadGuard India is a student-built academic/research
+                demonstration and is not an official Government of
+                India service.
+            </p>
+
+            <p>
+                © <span id="current-year"></span>
+                RoadGuard India
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================================================
+     ACCESSIBILITY LIVE REGION
+========================================================= -->
+
+<div
+    id="screen-reader-status"
+    class="sr-only"
+    aria-live="polite"
+    aria-atomic="true"
+></div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
